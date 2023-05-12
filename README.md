@@ -8,17 +8,27 @@ To write a program to predict the profit of a city using the linear regression m
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+``
+Step 1: Use the standard libraries such as numpy, pandas, matplotlib.pyplot in python for the Gradient Descent.
+
+Step 2: Upload the dataset conditions and check for any null value in the values provided using the .isnull() function.
+
+Step 3: Declare the default values such as n, m, c, L for the implementation of linear regression using gradient descent.
+
+Step 4: Calculate the loss using Mean Square Error formula and declare the variables y_pred, dm, dc to find the value of m.
+
+Step 5: Predict the value of y and also print the values of m and c.
+
+Step 6: Plot the accquired graph with respect to hours and scores using the scatter plot function.
+
+Step 7: End the program.
+```
 
 ## Program:
 ```
-/*
-Program to implement the linear regression using gradient descent.
-Developed by: 
-RegisterNumber:  
+NAME:PRASANNA GR
+REG NO:212221040129
+```
 
 ```
 import numpy as np
@@ -89,7 +99,36 @@ print("For population = 70,000, we predict a profit of $"+str(round(predict2,0))
 ```
 
 ## Output:
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/9839b3fb-524e-44c5-b4d5-490a15c68679)
+
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/edef9309-d1af-45a2-a97b-9853e0598aae)
+
+
+
+
+
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/71bdc884-bdfe-4f81-87d0-f4cada6aba07)
+
+
+
+
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/8116e027-7ee7-4f8f-9b13-63061f3586c4)
+
+
+
+
+
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/587c4c42-a5f1-447f-a8e4-3e9c8eab87f3)
+
+
+
+
+
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/02286d99-62a6-4f69-afb7-ba11806c7cd9)
+
+
+
+
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/cd2a63a2-f8af-4f51-aac0-f407b43d4ff9)
 
 
 ## Result:
