@@ -8,7 +8,7 @@ To write a program to predict the profit of a city using the linear regression m
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-``
+```
 Step 1: Use the standard libraries such as numpy, pandas, matplotlib.pyplot in python for the Gradient Descent.
 
 Step 2: Upload the dataset conditions and check for any null value in the values provided using the .isnull() function.
@@ -24,7 +24,7 @@ Step 6: Plot the accquired graph with respect to hours and scores using the scat
 Step 7: End the program.
 ```
 
-## Program:
+
 ```
 NAME:PRASANNA GR
 REG NO:212221040129
