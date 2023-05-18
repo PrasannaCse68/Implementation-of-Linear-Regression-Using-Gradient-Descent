@@ -26,8 +26,11 @@ Step 7: End the program.
 
 
 ```
+/*
+Program to implement the linear regression using gradient descent.
 NAME:PRASANNA GR
 REG NO:212221040129
+*/
 ```
 
 ```
@@ -99,10 +102,13 @@ print("For population = 70,000, we predict a profit of $"+str(round(predict2,0))
 ```
 
 ## Output:
+Profit Prediction:
+
 
 ![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/edef9309-d1af-45a2-a97b-9853e0598aae)
 
 
+Computecost:
 
 
 
@@ -114,13 +120,14 @@ print("For population = 70,000, we predict a profit of $"+str(round(predict2,0))
 ![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/8116e027-7ee7-4f8f-9b13-63061f3586c4)
 
 
-
+Cost Function using Gradient Descent:
 
 
 ![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/587c4c42-a5f1-447f-a8e4-3e9c8eab87f3)
 
 
 
+Profit Prediction:
 
 
 ![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/02286d99-62a6-4f69-afb7-ba11806c7cd9)
