@@ -17,8 +17,9 @@ To write a program to predict the marks scored by a student using the simple lin
 6.Compare the graphs and hence we obtain the LinearRegression for the given data
 ```
 
-
+## Program:
 ```
+
 /*
 Program to implement the linear regression using gradient descent.
 NAME:PRASANNA GR
