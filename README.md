@@ -1,7 +1,7 @@
-# Implementation-of-Linear-Regression-Using-Gradient-Descent
+# Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored
 
 ## AIM:
-To write a program to predict the profit of a city using the linear regression model with gradient descent.
+To write a program to predict the marks scored by a student using the simple linear regression model.
 
 ## Equipments Required:
 1. Hardware – PCs
@@ -9,19 +9,12 @@ To write a program to predict the profit of a city using the linear regression m
 
 ## Algorithm
 ```
-Step 1: Use the standard libraries such as numpy, pandas, matplotlib.pyplot in python for the Gradient Descent.
-
-Step 2: Upload the dataset conditions and check for any null value in the values provided using the .isnull() function.
-
-Step 3: Declare the default values such as n, m, c, L for the implementation of linear regression using gradient descent.
-
-Step 4: Calculate the loss using Mean Square Error formula and declare the variables y_pred, dm, dc to find the value of m.
-
-Step 5: Predict the value of y and also print the values of m and c.
-
-Step 6: Plot the accquired graph with respect to hours and scores using the scatter plot function.
-
-Step 7: End the program.
+1.Use the standard libraries in python.
+2.Set variables for assigning dataset values.
+3.Import LinearRegression from the sklearn.
+4.Assign the points for representing the graph.
+5.Predict the regression for marks by using the representation of graph.
+6.Compare the graphs and hence we obtain the LinearRegression for the given data
 ```
 
 
@@ -34,109 +27,58 @@ REG NO:212221040129
 ```
 
 ```
-import numpy as np
-import matplotlib.pyplot as plt
+
 import pandas as pd
+import numpy as np
+df=pd.read_csv('student_scores.csv')
+print(df)
 
-data=pd.read_csv("/content/ex1.txt",header=None)
+X=df.iloc[:,:-1].values
+Y=df.iloc[:,1].values
+print(X,Y)
+from sklearn.model_selection import train_test_split
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=1/3,random_state=0)
+from sklearn.linear_model import LinearRegression
+reg=LinearRegression()
+reg.fit(X_train,Y_train)
 
-plt.scatter(data[0],data[1])
-plt.xticks(np.arange(5,30,step=5))
-plt.yticks(np.arange(-5,30,step=5))
-plt.xlabel("Population of City (10,000s)")
-plt.ylabel("Profit ($10,000)")
-plt.title("Profit Prediction")
+Y_pred=reg.predict(X_test)
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_absolute_error , mean_squared_error
 
-def computeCost(x,y,theta):
-  m=len(y)
-  h=x.dot(theta)
-  square_err=(h-y)**2
-  return 1/(2*m)*np.sum(square_err)
-  
-data_n=data.values
-m=data_n[:,0].size
-x=np.append(np.ones((m,1)),data_n[:,0].reshape(m,1),axis=1)
-y=data_n[:,1].reshape(m,1)
-theta=np.zeros((2,1))
+plt.scatter(X_train,Y_train,color='green')
+plt.plot(X_train,reg.predict(X_train),color='purple')
+plt.title(' Training set (Hours Vs Scores)')
+plt.xlabel('Hours')
+plt.ylabel('Scores')
 
-computeCost(x,y,theta)
-def gradientDescent(x,y,theta,alpha,num_iters):
-  m=len(y)
-  J_history=[]
+plt.scatter(X_test,Y_test,color='green')
+plt.plot(X_test,reg.predict(X_test),color='purple')
+plt.title(' Training set (Hours Vs Scores)')
+plt.xlabel('Hours')
+plt.ylabel('Scores')
 
-  for i in range(num_iters):
-    predictions = x.dot(theta)
-    error = np.dot(x.transpose(),(predictions -y))
-    descent=alpha*1/m*error
-    theta-=descent
-    J_history.append(computeCost(x,y,theta))
+mse=mean_squared_error(Y_test,Y_pred)
+print('MSE = ',mse)
+mae=mean_absolute_error(Y_test,Y_pred)
+print('MAE = ',mae)
+rmse=np.sqrt(mse)
+print('RMSE = ',rmse)
 
-  return theta,J_history
-  theta,J_history = gradientDescent(x,y,theta,0.01,1500)
-print("h(x) *"+str(round(theta[0,0],2))+"+"+str(round(theta[1,0],2))+"x1")
-
-plt.plot(J_history)
-plt.xlabel("Iteration")
-plt.ylabel("$J(\theta)$")
-plt.title("Cost frunction using Gradient Descent")
-
-plt.scatter(data[0],data[1])
-x_value=[x for x in range(25)]
-y_value=[y*theta[1]+theta[0]for y in x_value]
-plt.plot(x_value,y_value,color="r")
-plt.xticks(np.arange(5,30,step=5))
-plt.yticks(np.arange(-5,30,step=5))
-plt.xlabel("Population of City (10,000s)")
-plt.ylabel("Profit ($10,000)")
-plt.ylabel("Profit predictions")
-
-def predict(x,theta):
-  predictions=np.dot(theta.transpose(),x)
-  return predictions[0]
-
-predict1=predict(np.array([1,3.5]),theta)*10000
-print("For population = 35,000, we predict a profit of $"+str(round(predict1,0)))
-
-predict2=predict(np.array([1,7]),theta)*10000
-print("For population = 70,000, we predict a profit of $"+str(round(predict2,0)))
 ```
 
 ## Output:
-Profit Prediction:
 
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/edef9309-d1af-45a2-a97b-9853e0598aae)
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/64a6ce86-9d5b-4739-ada0-8fca70cfdb56)
 
 
-Computecost:
-
-
-
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/71bdc884-bdfe-4f81-87d0-f4cada6aba07)
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/34004a6c-f39c-430d-982d-6b8389cbc987)
 
 
 
-
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/8116e027-7ee7-4f8f-9b13-63061f3586c4)
-
-
-Cost Function using Gradient Descent:
-
-
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/587c4c42-a5f1-447f-a8e4-3e9c8eab87f3)
-
-
-
-Profit Prediction:
-
-
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/02286d99-62a6-4f69-afb7-ba11806c7cd9)
-
-
-
-
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/cd2a63a2-f8af-4f51-aac0-f407b43d4ff9)
+![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/41bbfa4e-0af1-4b64-a42b-ef03b010d087)
 
 
 ## Result:
-Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
+Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
