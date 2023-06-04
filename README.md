@@ -8,26 +8,24 @@ To write a program to predict the profit of a city using the linear regression m
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-```
-Step1: Import the needed packages.
+Step1:
+Import the needed packages.
 
-Step2: Read the txt file using read_csv.
+Step2:
+Read the txt file using read_csv.
 
-Step3: Use numpy to find theta,x,y values.
+Step3:
+Use numpy to find theta,x,y values.
 
-Step4: To visualize the data use plt.plot.
-```
+Step4:
+To visualize the data use plt.plot.
 
 ## Program:
 ```
-
-/*
 Program to implement the linear regression using gradient descent.
-NAME:PRASANNA GR
+NAME:PRASANNA G R 
 REG NO:212221040129
-*/
 ```
-
 ```
 import numpy as np
 import matplotlib.pyplot as plt
@@ -96,39 +94,50 @@ predict2=predict(np.array([1,7]),theta)*10000
 print("For population = 70,000, we predict a profit of $"+str(round(predict2,0)))
 ```
 
-
 ## Output:
 
 
 Profit Prediction:
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/404921d7-0217-4165-9e4f-440a3f82369c)
+
+
+
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/63895cc7-a4c8-46fd-bbd2-612047a8bcec)
 
 
 Computecost:
 
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/91c15d19-e35b-49e2-9752-16962a9dfb39)
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/41b9b345-83d4-4b75-b842-d02fa6069aa1)
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/058812b6-dd72-436f-852d-958f3dfa6e4e)
+
+
+
+
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/adfd6b58-743e-431f-9d37-75f6074dc4b5)
 
 
 
 Cost Function using Gradient Descent:
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/5049b6cd-0881-447f-9ee9-3f82cba9b6d1)
+
+
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/576898f3-dedb-44ac-bb9a-79f860df8dc0)
 
 
 Profit Prediction:
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/3feeaa13-f175-4004-9881-71823ce11899)
+
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/2e453d55-25dd-4731-a391-184ec19328b3)
 
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/ad5d6932-f585-407f-8626-e64c5ee73361)
+
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/86e17f1c-cf23-4224-a4f8-7940545eaafb)
 
 
-![image](https://github.com/PrasannaCse68/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/127935950/4a10dc15-3095-4329-80bd-1d550e0bd9ef)
+![image](https://github.com/KARTHICKRAJM84/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/128134963/79ae251a-5ed1-4414-8998-553440d20fe8)
+
+
 
 ## Result:
-
 Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
